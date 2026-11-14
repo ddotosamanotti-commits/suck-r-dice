@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OFFLINE DICE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scene" id="scene">
+    <div class="stars"></div><div class="sun-glow"></div>
+    <header class="brand"><div class="brand-mark">OFFLINE DICE</div></header>
+
+    <main class="layout">
+      <aside class="side-panel left-panel">
+        <h2>OUR TOP STREAMERS</h2>
+        <div id="leftStreamers" class="streamer-list"></div>
+      </aside>
+
+      <section class="main-panel">
+        <h1>ROLL COLORED DICE</h1>
+        <div class="selectors">
+          <label><span class="sr-only">Number of dice</span>
+            <select id="diceCount" aria-label="Number of dice"></select>
+          </label>
+          <label><span class="sr-only">Dice mode</span>
+            <select id="diceMode" aria-label="Dice mode">
+              <option value="colored">COLOR DICE</option>
+              <option value="single">SINGLE COLOR</option>
+              <option value="rainbow">RAINBOW</option>
+            </select>
+          </label>
+          <label><span class="sr-only">Theme</span>
+            <select id="themeSelect" aria-label="Theme"></select>
+          </label>
+        </div>
+
+        <div id="diceTray" class="dice-tray" aria-live="polite"></div>
+        <div class="roll-id">ID: <strong id="rollId">OFFLINE-000000</strong> <span class="verified">• LOCAL ROLL</span></div>
+        <button id="rollButton" class="gold-button">ROLL AGAIN !</button>
+
+        <div class="score-panel">
+          <div class="score-labels"><span>-1</span><span>-0.25</span><span>-5</span><span>-10</span></div>
+          <div class="score-icon">🎲</div>
+          <div class="score-value" id="scoreValue">+0</div>
+          <div class="score-labels positive"><span>+1</span><span>+0.25</span><span>+5</span><span>+10</span></div>
+        </div>
+
+        <button id="downloadButton" class="gold-button download-button">DOWNLOAD APP</button>
+
+        <div class="local-stats">
+          <div>🎲 Rolls this session: <b id="rollsToday">0</b></div>
+          <div>👤 Local dice count: <b id="diceTotal">0</b></div>
+        </div>
+
+        <div class="goal-panel">
+          <div class="goal-head"><span>YOUR LOCAL ROLL PROGRESS</span><b>SESSION</b></div>
+          <div class="progress-track"><div id="progressBar"></div></div>
+          <div class="goal-foot"><span>Progress updates with every roll</span><b id="progressText">0 rolls</b></div>
+        </div>
+
+        <p class="colors-note">Possible colors: <b class="red">Red</b>, <b class="orange">Orange</b>,
+          <b class="yellow">Yellow</b>, <b class="green">Green</b>, <b class="blue">Blue</b> and
+          <b class="purple">Purple</b>.</p>
+        <div class="history">
+          <h3>LAST 25 ROLLS</h3>
+          <div id="historyList" class="history-list"><span class="empty-history">Your rolls will appear here.</span></div>
+        </div>
+      </section>
+
+      <aside class="side-panel right-panel">
+        <h2>OUR TOP STREAMERS</h2>
+        <div id="rightStreamers" class="streamer-list"></div>
+        <button id="blurButton" class="blur-button">BLUR OFF</button>
+      </aside>
+    </main>
+
+    <section class="info-grid">
+      <article class="info-card"><h2>HOW DOES OFFLINE DICE WORK?</h2>
+        <p>Offline Dice is a local digital dice simulator. Choose from 1 to 100 dice, select a color mode and a visual theme, then press ROLL AGAIN to generate a new result.</p>
+        <p>Each die displays one of six colors: <b class="red">Red</b>, <b class="orange">Orange</b>, <b class="yellow">Yellow</b>, <b class="green">Green</b>, <b class="blue">Blue</b> and <b class="purple">Purple</b>.</p>
+      </article>
+      <article class="info-card"><h2>ABOUT US</h2>
+        <p>OFFLINE DICE is a standalone dice-rolling experience designed for quick sessions, custom colors and a smooth interface. Your rolls and history stay in this session; no account or server is required.</p>
+      </article>
+      <article class="info-card"><h2>HOW DOES THE RANDOMIZATION WORK?</h2>
+        <p>Each die is selected independently using the browser's local random-number generator. This project is an entertainment simulator, not a certified cryptographic random-number service. Results are not externally verified.</p>
+      </article>
+      <article class="info-card"><h2>BECOME A TOP STREAMER</h2>
+        <p>Want to be featured on the Top Streamers list? Add your own approved streamer links in <b>script.js</b> and customize the displayed names and handles.</p>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <button class="footer-button vip" id="vipButton">VIP LOGIN</button>
+      <select id="languageSelect" class="language-select" aria-label="Language">
+        <option value="en">ENGLISH</option><option value="fr">FRANÇAIS</option>
+      </select>
+      <div class="footer-links">
+        <button class="footer-button tiktok" id="tiktokButton">OUR TIKTOK</button>
+        <button class="footer-button discord" id="discordButton">OUR DISCORD</button>
+      </div>
+      <div class="ticker"><b>UPDATES</b> OFFLINE DICE — LOCAL MODE • UP TO 100 DICE • CUSTOM COLORS • HAVE FUN!</div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
